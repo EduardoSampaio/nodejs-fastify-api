@@ -5,13 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "node dist/src/server.js",
-    "build": "tsc -p .",
+    "build": "tsup src",
     "dev": "tsx watch src/server.ts",
     "lint": "eslint src --ext .ts --fix",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "migration-make": "npx knex migrate:make",
-    "migration-latest": "npx knex migrate:latest",
-    "migration-rollback": "npx knex migrate:rollback"
+    "test": "vitest",
+    "knex": "knex"
   },
   "keywords": [],
   "author": "",
@@ -19,7 +17,10 @@
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.2.2",
     "@types/node": "^20.12.7",
-    "eslint": "^8.57.0"
+    "@types/supertest": "^6.0.2",
+    "eslint": "^8.57.0",
+    "supertest": "^7.0.0",
+    "tsup": "^8.3.5"
   },
   "dependencies": {
     "dotenv": "^16.4.5",

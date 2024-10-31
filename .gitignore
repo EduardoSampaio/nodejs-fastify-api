@@ -129,5 +129,8 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-./db/app.sqlite
+#project files
+./db/*.sqlite
 .env
+.env.test
+dist
